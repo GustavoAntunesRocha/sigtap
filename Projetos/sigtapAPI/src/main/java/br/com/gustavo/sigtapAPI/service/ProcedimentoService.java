@@ -1,6 +1,7 @@
 package br.com.gustavo.sigtapAPI.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,8 +15,8 @@ public class ProcedimentoService {
 	@Autowired
 	private ProcedimentoRepository procedimentoRepository;
 	
-	public Procedimento buscaPorCodigo(int codigo) {
-		return procedimentoRepository.getById(codigo);
+	public Optional<Procedimento> buscaPorCodigo(int codigo) {
+		return procedimentoRepository.findById(codigo);
 	}
 	
 	public List<Procedimento> buscaPorFormaOrganizacao(int codigoOrganizacao){
