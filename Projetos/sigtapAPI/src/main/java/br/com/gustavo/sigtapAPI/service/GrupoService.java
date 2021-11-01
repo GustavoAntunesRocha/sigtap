@@ -21,4 +21,8 @@ public class GrupoService {
 	public List<Grupo> buscaPorNome(String nome){
 		return grupoRepository.findByNomeContainingIgnoreCase(nome);
 	}
+	
+	public Grupo buscaPorCodigo(int codigo) {
+		return grupoRepository.findByCodigo(codigo);
+	}
 }

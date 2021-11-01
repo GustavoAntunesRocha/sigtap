@@ -11,5 +11,7 @@ public interface SubGrupoRepository extends JpaRepository<SubGrupo, Integer>{
 	SubGrupo findByCodigo(int codigo);
 	
 	List<SubGrupo> findByGrupoCodigo(int codigo);
+	
+	List<SubGrupo> findByNomeContainingIgnoreCase(String nome);
 
 }

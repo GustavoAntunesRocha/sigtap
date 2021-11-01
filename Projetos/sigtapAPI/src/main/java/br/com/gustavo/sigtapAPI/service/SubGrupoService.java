@@ -25,4 +25,8 @@ public class SubGrupoService {
 	public SubGrupo buscaPorCodigo(int codigo) {
 		return subGrupoRepository.findByCodigo(codigo);
 	}
+	
+	public List<SubGrupo> buscaPorNome(String nome){
+		return subGrupoRepository.findByNomeContainingIgnoreCase(nome);
+	}
 }
